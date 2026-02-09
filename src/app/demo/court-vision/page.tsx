@@ -609,7 +609,7 @@ export default function CourtVisionPage() {
                       p.team === "offense"
                         ? "rgba(99, 102, 241, 0.06)"
                         : "rgba(239, 68, 68, 0.05)";
-                    return cells.map((c, ci) => (
+                    return cells.map((c: { x: number; y: number }, ci: number) => (
                       <rect
                         key={`v-${p.id}-${ci}`}
                         x={c.x}
