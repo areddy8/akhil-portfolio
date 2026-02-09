@@ -72,9 +72,41 @@ export default function Home() {
         Skip to content
       </a>
 
-      <main id="main-content" className="mx-auto max-w-5xl px-6 py-12">
+      <main id="main-content" className="relative mx-auto max-w-5xl px-6 py-12">
+        {/* ── grid lines background ─────────────────────────── */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+          {/* vertical lines */}
+          <div className="absolute inset-0" style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px)",
+            backgroundSize: "120px 100%",
+          }} />
+          {/* horizontal lines */}
+          <div className="absolute inset-0" style={{
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)",
+            backgroundSize: "100% 120px",
+          }} />
+          {/* corner crosshairs */}
+          {[
+            "top-6 left-6",
+            "top-6 right-6",
+            "bottom-6 left-6",
+            "bottom-6 right-6",
+          ].map((pos) => (
+            <div key={pos} className={`absolute ${pos}`}>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-white/[0.12]">
+                <line x1="8" y1="0" x2="8" y2="16" stroke="currentColor" strokeWidth="0.5" />
+                <line x1="0" y1="8" x2="16" y2="8" stroke="currentColor" strokeWidth="0.5" />
+              </svg>
+            </div>
+          ))}
+          {/* accent glow behind hero */}
+          <div className="absolute left-1/2 top-[200px] -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-white/[0.015] blur-[100px]" />
+        </div>
+
         {/* ── nav ───────────────────────────────────────────── */}
-        <header className="flex items-center justify-between">
+        <header className="relative flex items-center justify-between">
           <Link href="/" className="text-lg font-semibold text-white hover:text-white/80 transition">
             Akhil Reddy
           </Link>
@@ -95,7 +127,7 @@ export default function Home() {
         </header>
 
         {/* ── hero ──────────────────────────────────────────── */}
-        <section className="mt-20">
+        <section className="relative mt-20">
           {/* headline — outcome-forward */}
           <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.15] tracking-tight text-white sm:text-5xl">
             I ship analytics products: semantic metrics, warehouse models, and AI&#8209;assisted analysis.
