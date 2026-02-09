@@ -1,0 +1,11 @@
+[
+  { "grid_id": "AA", "product": "PL", "channel": "Mixed", "effective_date": "2025-10-01", "file": "AA.csv" },
+  { "grid_id": "AB", "product": "PL", "channel": "Mixed", "effective_date": "2025-10-01", "file": "AB.csv" },
+  { "grid_id": "AC", "product": "PL", "channel": "Mixed", "effective_date": "2025-10-01", "file": "AC.csv" },
+  { "grid_id": "AD", "product": "PL", "channel": "Mixed", "effective_date": "2025-11-05", "file": "AD.csv" },
+  { "grid_id": "AE", "product": "PL", "channel": "Mixed", "effective_date": "2025-11-19", "file": "AE.csv" },
+  { "grid_id": "AF", "product": "PL", "channel": "Mixed", "effective_date": "2025-11-30", "file": "AF.csv" },
+  { "grid_id": "AG", "product": "PL", "channel": "Mixed", "effective_date": "2025-11-30", "file": "AG.csv" },
+  { "grid_id": "AH", "product": "PL", "channel": "Mixed", "effective_date": "2025-12-21", "file": "AH.csv" },
+  { "grid_id": "AI", "product": "PL", "channel": "Mixed", "effective_date": "2025-12-21", "file": "AI.csv" }
+]
