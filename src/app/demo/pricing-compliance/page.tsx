@@ -109,7 +109,23 @@ export default function PricingCompliancePage() {
   }, [data?.kpis]);
 
   const chart = useMemo(() => {
-    if (!series.length) return { observed: "", expected: "", bandTop: "", bandBottom: "" };
+    if (!series.length) {
+      const chartW = 980;
+      const chartH = 260;
+      const pad = { l: 50, r: 16, t: 16, b: 30 };
+      return {
+        observed: "",
+        expected: "",
+        bandTop: "",
+        bandBottom: "",
+        yTicks: [0, 0.25, 0.5, 0.75, 1],
+        toY: () => chartH - pad.b,
+        chartW,
+        chartH,
+        pad,
+        innerW: chartW - pad.l - pad.r,
+      };
+    }
     const chartW = 980;
     const chartH = 260;
     const pad = { l: 50, r: 16, t: 16, b: 30 };
