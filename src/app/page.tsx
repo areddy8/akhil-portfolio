@@ -32,11 +32,11 @@ const featured = [
     live: true,
   },
   {
-    title: "NBA Shot Chart Explorer",
+    title: "Pricing Compliance Radar",
     outcome:
-      "High-density visual storytelling with hexbin heatmaps, trend overlays, and comparative insights designed for fast executive-level data discovery.",
-    tags: ["data visualization", "multivariate analysis", "animation", "React"],
-    href: "/demo/nba-viz",
+      "Monte Carlo-driven compliance cockpit with real-time anomaly triage, confidence bands, product-level risk heatmaps, and pricing guardrail simulation.",
+    tags: ["risk analytics", "Monte Carlo alerting", "compliance telemetry", "Next.js"],
+    href: "/demo/pricing-compliance",
     live: true,
   },
 ];
@@ -148,6 +148,9 @@ export default function Home() {
           <nav className="flex gap-6 text-sm text-muted-foreground">
             <Link className="hover:text-foreground transition" href="/projects">
               Work
+            </Link>
+            <Link className="hover:text-foreground transition" href="/demo/pricing-compliance">
+              Compliance Radar
             </Link>
             <Link className="hover:text-foreground transition" href="/demo/grid-analyst">
               Demos

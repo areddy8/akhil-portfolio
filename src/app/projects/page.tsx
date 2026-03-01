@@ -5,6 +5,13 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
+    title: "Pricing Compliance Radar",
+    desc: "SoFi-style risk and compliance intelligence dashboard with Monte Carlo alerting, forecast confidence bands, product heatmaps, and pricing scenario guardrail simulation.",
+    tags: ["risk analytics", "Monte Carlo alerting", "real-time dashboard", "Next.js", "TypeScript"],
+    href: "/demo/pricing-compliance",
+    live: true,
+  },
+  {
     title: "Grid Analyst",
     desc: "High-performance intelligence cockpit with WAC heatmaps, historical replay simulation, experiment scheduling, and AI-assisted analyst narratives over production-style telemetry.",
     tags: ["Next.js", "OpenAI", "real-time analytics UX", "data viz", "simulation"],
@@ -51,6 +58,9 @@ export default function ProjectsPage() {
         <nav className="flex gap-6 text-sm text-muted-foreground">
           <Link className="hover:text-foreground" href="/demo/grid-analyst">
             Grid Analyst
+          </Link>
+          <Link className="hover:text-foreground" href="/demo/pricing-compliance">
+            Compliance Radar
           </Link>
           <Link className="hover:text-foreground" href="/demo/nba-viz">
             NBA Viz
