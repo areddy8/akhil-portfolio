@@ -126,9 +126,9 @@ const education = [
 
 const skills = [
   { category: "Languages & Query", items: ["Python", "SQL", "R", "SAQL", "VB Script"] },
-  { category: "Data & ML", items: ["dbt", "Snowflake", "Airflow", "AWS SageMaker", "Monte Carlo", "Fivetran", "Teradata", "MongoDB", "PostgreSQL"] },
+  { category: "Data & ML", items: ["dbt", "Snowflake", "Airflow", "AWS SageMaker", "Spark", "Presto", "Monte Carlo", "Fivetran", "Teradata", "MongoDB", "PostgreSQL"] },
   { category: "BI & Visualization", items: ["Tableau", "Looker", "Power BI", "Mode", "Sigma", "Sisense", "Einstein Analytics"] },
-  { category: "AI & Modern Stack", items: ["RAG", "Vector Search", "MCP", "FastAPI", "Docker", "Git", "GitLab", "CI/CD"] },
+  { category: "AI & Modern Stack", items: ["RAG", "Vector Search", "MCP", "FastAPI", "REST/GraphQL APIs", "Docker", "Kubernetes", "Git", "GitLab", "CI/CD"] },
   { category: "Platforms", items: ["Salesforce", "Datadog", "Workato", "Toad Automation", "MATLAB", "RStudio"] },
 ];
 

@@ -2,23 +2,14 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-/* ── stats ─────────────────────────────────────────────────────── */
-
-const stats = [
-  { value: "$20B+", label: "Portfolio managed" },
-  { value: "70%", label: "Faster analysis cycles" },
-  { value: "1,000+", label: "Deployments monitored" },
-  { value: "99.9%", label: "Compliance accuracy" },
-];
-
 /* ── status bar metadata ──────────────────────────────────────── */
 
 const statusMeta = [
-  { key: "Status", value: "Building" },
-  { key: "Domain", value: "Lending / Pricing / Fintech" },
-  { key: "Stack", value: "dbt · Snowflake · Python · Airflow" },
-  { key: "Mode", value: "ANALYTICS_ACTIVE" },
-  { key: "Access", value: "Public" },
+  { key: "Status", value: "Building", color: "text-emerald-400/70" },
+  { key: "Domain", value: "AI Infra / Analytics / Fintech", color: "text-white/45" },
+  { key: "Stack", value: "SQL · Python · Spark · APIs · LLM tools", color: "text-white/45" },
+  { key: "Mode", value: "ANALYTICS_ACTIVE", color: "text-emerald-400/70" },
+  { key: "Access", value: "Public", color: "text-white/45" },
 ];
 
 /* ── featured projects ─────────────────────────────────────────── */
@@ -27,24 +18,24 @@ const featured = [
   {
     title: "Grid Analyst",
     outcome:
-      "Compare pricing grids, highlight WAC differences across cohorts, and run AI-assisted what-if simulations — all from real experiment data.",
-    tags: ["Next.js", "OpenAI", "dbt-style metrics", "A/B readouts"],
+      "An intelligence cockpit for pricing telemetry: cohort drill-downs, historical replay, and AI-assisted what-if simulations with low-latency interactions.",
+    tags: ["Next.js", "OpenAI", "interactive telemetry", "A/B readouts"],
     href: "/demo/grid-analyst",
     live: true,
   },
   {
     title: "Court IQ — Tactical Spacing",
     outcome:
-      "Upload an NBA broadcast screenshot; GPT-4o detects players, then geometric analysis renders Voronoi territories, driving lanes, and a spacing score.",
-    tags: ["GPT-4o vision", "Voronoi", "spatial analysis", "SVG"],
+      "Vision + geometry analytics application: GPT-4o detects entities, then real-time overlays render control zones, matchup pressure, and actionable spacing insights.",
+    tags: ["GPT-4o vision", "custom visualization", "spatial analysis", "SVG"],
     href: "/demo/court-vision",
     live: true,
   },
   {
     title: "NBA Shot Chart Explorer",
     outcome:
-      "Hexbin heatmaps, hot-zone overlays vs league average, player head-to-head, momentum tracking, and career arcs for 6 NBA stars.",
-    tags: ["nba_api", "CV-inspired", "animation", "React"],
+      "High-density visual storytelling with hexbin heatmaps, trend overlays, and comparative insights designed for fast executive-level data discovery.",
+    tags: ["data visualization", "multivariate analysis", "animation", "React"],
     href: "/demo/nba-viz",
     live: true,
   },
@@ -54,20 +45,52 @@ const featured = [
 
 const principles = [
   {
-    title: "Metrics You Can Trust",
-    desc: "Define metric contracts with tests, freshness checks, and lineage — so every number has one source of truth.",
+    num: "001",
+    title: "Real-Time Decision UX",
+    desc: "Design dashboards and intelligence surfaces that reduce decision latency, not just display charts.",
   },
   {
-    title: "Models That Scale",
-    desc: "Clean warehouse layers in dbt + Snowflake that analysts, ML pipelines, and dashboards can all depend on.",
+    num: "002",
+    title: "Petabyte-Ready Architecture Thinking",
+    desc: "Combine speed-layer patterns with warehouse/lakehouse modeling so interactive experiences remain fast as data grows.",
   },
   {
-    title: "Tools That Ship",
-    desc: "A/B readouts, grid diffing, AI copilots — from prototype to production. If it saves a decision-maker time, it gets built.",
+    num: "003",
+    title: "ML + UX Bridge",
+    desc: "Translate model outputs into intuitive interfaces: simulation controls, confidence views, and narrative summaries for non-technical stakeholders.",
   },
   {
-    title: "Rigor at Speed",
-    desc: "Compliance monitoring, Monte Carlo alerting, automated QA — move fast without breaking trust.",
+    num: "004",
+    title: "Agentic Analytics Systems",
+    desc: "Build tool-using LLM workflows and API-first services that automate multi-step analysis while keeping humans in the loop.",
+  },
+];
+
+/* ── proof chips ───────────────────────────────────────────────── */
+
+const proofChips = [
+  "8+ years in data products and dashboard engineering",
+  "Owned analytics on $20B+ lending portfolio",
+  "Shipped AI-assisted decision tooling and narratives",
+  "Built APIs + workflow automation for analyst speed",
+];
+
+const roleFit = [
+  {
+    need: "Rapid dashboard prototyping and production UX",
+    evidence: "Grid Analyst ships interactive KPI strips, heatmaps, historical replay, and what-if simulation in a production-style interface.",
+  },
+  {
+    need: "Bridge ML outputs and executive decision workflows",
+    evidence: "What-if simulation, AI narrative generation, and confidence-driven visual summaries turn model behavior into action-ready recommendations.",
+  },
+  {
+    need: "Large-scale data + low-latency discovery",
+    evidence: "Portfolio demos emphasize speed-layer thinking, filtered cohort exploration, and query-efficient summaries over high-volume datasets.",
+  },
+  {
+    need: "AI agent workflows and orchestration services",
+    evidence: "Experience building MCP-based tool layers and LLM-assisted diff workflows that automate multi-step analysis with human review.",
   },
 ];
 
@@ -84,240 +107,263 @@ export default function Home() {
         Skip to content
       </a>
 
-      <main id="main-content" className="relative min-h-screen">
-        {/* ── grid lines background (full page) ─────────────── */}
-        <div className="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden="true">
+      <main id="main-content" className="relative mx-auto max-w-5xl px-6 py-12">
+        {/* ── grid lines background ─────────────────────────── */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
           {/* vertical lines */}
           <div className="absolute inset-0" style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px)",
-            backgroundSize: "140px 100%",
+              "linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px)",
+            backgroundSize: "120px 100%",
           }} />
           {/* horizontal lines */}
           <div className="absolute inset-0" style={{
             backgroundImage:
-              "linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)",
-            backgroundSize: "100% 140px",
+              "linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)",
+            backgroundSize: "100% 120px",
           }} />
           {/* corner crosshairs */}
           {[
-            "top-4 left-4",
-            "top-4 right-4",
+            "top-6 left-6",
+            "top-6 right-6",
+            "bottom-6 left-6",
+            "bottom-6 right-6",
           ].map((pos) => (
             <div key={pos} className={`absolute ${pos}`}>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="text-white/[0.1]">
-                <line x1="10" y1="0" x2="10" y2="20" stroke="currentColor" strokeWidth="0.5" />
-                <line x1="0" y1="10" x2="20" y2="10" stroke="currentColor" strokeWidth="0.5" />
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-white/[0.12]">
+                <line x1="8" y1="0" x2="8" y2="16" stroke="currentColor" strokeWidth="0.5" />
+                <line x1="0" y1="8" x2="16" y2="8" stroke="currentColor" strokeWidth="0.5" />
               </svg>
             </div>
           ))}
-          {/* accent glow */}
-          <div className="absolute left-1/2 top-[280px] -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-white/[0.012] blur-[120px]" />
+          {/* accent glow behind hero */}
+          <div className="absolute left-1/2 top-[200px] -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-white/[0.015] blur-[100px]" />
         </div>
 
-        <div className="relative mx-auto max-w-5xl px-6 py-12">
-          {/* ── nav ───────────────────────────────────────────── */}
-          <header className="flex items-center justify-between">
-            <Link href="/" className="text-lg font-semibold text-white hover:text-white/80 transition">
-              Akhil Reddy
+        {/* ── nav ───────────────────────────────────────────── */}
+        <header className="relative flex items-center justify-between">
+          <Link href="/" className="text-lg font-semibold text-white hover:text-white/80 transition">
+            Akhil Reddy
+          </Link>
+          <nav className="flex gap-6 text-sm text-muted-foreground">
+            <Link className="hover:text-foreground transition" href="/projects">
+              Work
             </Link>
-            <nav className="flex gap-6 text-sm text-muted-foreground">
-              <Link className="hover:text-foreground transition" href="/projects">
-                Work
-              </Link>
-              <Link className="hover:text-foreground transition" href="/demo/grid-analyst">
-                Demos
-              </Link>
-              <Link className="hover:text-foreground transition" href="/demo/nba-viz">
-                Viz
-              </Link>
-              <Link className="hover:text-foreground transition" href="/about">
-                About
-              </Link>
-            </nav>
-          </header>
+            <Link className="hover:text-foreground transition" href="/demo/grid-analyst">
+              Demos
+            </Link>
+            <Link className="hover:text-foreground transition" href="/demo/nba-viz">
+              Viz
+            </Link>
+            <Link className="hover:text-foreground transition" href="/about">
+              About
+            </Link>
+          </nav>
+        </header>
 
-          {/* ── terminal status bar ──────────────────────────── */}
-          <div className="mt-12 flex flex-wrap gap-x-6 gap-y-1.5 font-mono text-[11px]">
-            {statusMeta.map((m) => (
-              <span key={m.key}>
-                <span className="text-white/25">{m.key}</span>
-                <span className="text-white/10">:</span>
-                <span className={`ml-1 ${m.value === "ANALYTICS_ACTIVE" ? "text-emerald-400/60" : m.value === "Building" ? "text-amber-400/60" : "text-white/45"}`}>
-                  {m.value}
-                </span>
+        {/* ── terminal status bar ──────────────────────────── */}
+        <div className="relative mt-10 flex flex-wrap gap-x-6 gap-y-1.5 font-mono text-[11px]">
+          {statusMeta.map((m) => (
+            <span key={m.key}>
+              <span className="text-white/25">{m.key}</span>
+              <span className="text-white/10">:</span>
+              <span className={`ml-1 ${m.color}`}>{m.value}</span>
+            </span>
+          ))}
+        </div>
+
+        {/* ── hero ──────────────────────────────────────────── */}
+        <section className="relative mt-14">
+          {/* headline — outcome-forward */}
+          <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.15] tracking-tight text-white sm:text-5xl">
+            I build real-time intelligence products where data visualization, ML insights, and engineering meet.
+          </h1>
+
+          {/* subhead — concrete proof points */}
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/55">
+            SQL + Python + Spark patterns &middot; interactive analytics UX &middot; predictive insight visualization &middot; API-first services &middot; agentic AI workflows
+          </p>
+
+          {/* credibility row */}
+          <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-white/40">
+            <span>8+ yrs building decision systems</span>
+            <span className="hidden sm:inline text-white/15">|</span>
+            <span>Data Viz &middot; Data Science &middot; Data Engineering</span>
+            <span className="hidden sm:inline text-white/15">|</span>
+            <span>Python, SQL, Spark, APIs, LLM tools, cloud data stacks</span>
+          </div>
+
+          {/* proof chips */}
+          <div className="mt-5 flex flex-wrap gap-2">
+            {proofChips.map((chip) => (
+              <span
+                key={chip}
+                className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/15 bg-emerald-500/[0.06] px-3 py-1 text-[11px] text-emerald-300/70"
+              >
+                <svg className="h-3 w-3 flex-shrink-0" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8.5l3 3 7-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {chip}
               </span>
             ))}
           </div>
 
-          {/* ── hero ──────────────────────────────────────────── */}
-          <section className="mt-16">
-            <h1 className="max-w-4xl text-[clamp(2.2rem,5.5vw,4rem)] font-semibold leading-[1.08] tracking-tight text-white">
-              I ship analytics products: semantic metrics, warehouse models, and AI&#8209;assisted&nbsp;analysis.
-            </h1>
+          {/* CTAs */}
+          <div className="mt-9 flex flex-wrap items-center gap-4">
+            <Button asChild size="lg" className="rounded-xl">
+              <Link href="/demo/grid-analyst">Open Intelligence Cockpit Demo</Link>
+            </Button>
+            <Button variant="secondary" asChild size="lg" className="rounded-xl">
+              <Link href="/projects">View selected work</Link>
+            </Button>
+          </div>
 
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/50">
-              dbt + Snowflake &middot; metric definitions + tests &middot; A/B experiment readouts &middot; pricing grid diffs &middot; LLM-powered copilots
-            </p>
+          {/* microcopy */}
+          <p className="mt-2.5 text-[11px] text-white/25">
+            No login &middot; sample data &middot; 60 seconds to try
+          </p>
 
-            {/* credibility row */}
-            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-white/35">
-              <span>8+ yrs building decision systems</span>
-              <span className="hidden sm:inline text-white/10">|</span>
-              <span>Lending &middot; Pricing &middot; Fintech</span>
-              <span className="hidden sm:inline text-white/10">|</span>
-              <span>Python, SQL, dbt, Snowflake, Airflow, Looker</span>
-            </div>
-
-            {/* CTAs */}
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Button asChild size="lg" className="rounded-xl">
-                <Link href="/demo/grid-analyst">Open Grid Analyst Demo</Link>
-              </Button>
-              <Button variant="secondary" asChild size="lg" className="rounded-xl">
-                <Link href="/projects">View selected work</Link>
-              </Button>
-            </div>
-
-            <p className="mt-2.5 text-[11px] text-white/20 font-mono">
-              No login &middot; sample data &middot; 60 seconds to try
-            </p>
-          </section>
-
-          {/* ── stat counters ─────────────────────────────────── */}
-          <section className="mt-24 border-y border-white/[0.06] py-12">
-            <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <div className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                    {s.value}
-                  </div>
-                  <div className="mt-1.5 text-[12px] text-white/35">
-                    {s.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* ── featured work ─────────────────────────────────── */}
-          <section className="mt-24">
-            <div className="flex items-end justify-between">
-              <h2 className="text-xl font-semibold text-white">Featured work</h2>
-              <Link
-                className="text-sm text-white/35 hover:text-white/60 transition font-mono"
-                href="/projects"
-              >
-                All projects &rarr;
-              </Link>
-            </div>
-
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {featured.map((p) => (
-                <Link
-                  key={p.title}
-                  href={p.href}
-                  className="group rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-transparent p-6 transition hover:border-white/[0.12] hover:from-white/[0.06] hover:shadow-lg"
-                >
-                  {p.live && (
-                    <span className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/[0.08] px-2 py-0.5 text-[10px] font-medium font-mono text-emerald-400/80">
-                      <span className="h-1 w-1 rounded-full bg-emerald-400 animate-pulse" />
-                      LIVE
-                    </span>
-                  )}
-
-                  <h3 className="text-[15px] font-semibold text-white group-hover:text-white/90">
-                    {p.title}
-                  </h3>
-
-                  <p className="mt-2.5 text-[12px] leading-relaxed text-white/40 group-hover:text-white/55">
-                    {p.outcome}
-                  </p>
-
-                  <div className="mt-4 flex flex-wrap gap-1.5">
-                    {p.tags.map((t) => (
-                      <Badge
-                        key={t}
-                        variant="secondary"
-                        className="border-white/[0.06] bg-white/[0.03] text-[10px] font-mono text-white/35"
-                      >
-                        {t}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  <div className="mt-5 text-[12px] font-mono font-medium text-white/25 group-hover:text-white/60 transition">
-                    Open &rarr;
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          {/* ── principles (Cult "We Believe In" style) ──────── */}
-          <section className="mt-28">
-            <h2 className="text-xl font-semibold text-white">What I believe in</h2>
-            <p className="mt-2 text-sm text-white/35">
-              The principles behind how I build.
-            </p>
-
-            <div className="mt-10 grid gap-px sm:grid-cols-2 overflow-hidden rounded-2xl border border-white/[0.06]">
-              {principles.map((p) => (
-                <div
-                  key={p.title}
-                  className="bg-white/[0.02] p-8 transition hover:bg-white/[0.04]"
-                >
-                  <h3 className="text-[16px] font-semibold text-white">{p.title}</h3>
-                  <p className="mt-3 text-[13px] leading-relaxed text-white/40">{p.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* ── small links row ───────────────────────────────── */}
-          <section className="mt-24 flex flex-wrap items-center justify-center gap-6 text-[12px] font-mono text-white/25">
-            <Link href="/about" className="hover:text-white/50 transition">
+          {/* small links */}
+          <div className="mt-4 flex gap-5 text-[11px] text-white/30">
+            <Link href="/about" className="underline decoration-white/10 hover:text-white/50 transition">
               Resume
             </Link>
-            <span className="text-white/10">·</span>
             <a
               href="https://linkedin.com/in/akhilreddy"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white/50 transition"
+              className="underline decoration-white/10 hover:text-white/50 transition"
             >
               LinkedIn
             </a>
-            <span className="text-white/10">·</span>
             <a
               href="https://github.com/akhilreddy"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white/50 transition"
+              className="underline decoration-white/10 hover:text-white/50 transition"
             >
               GitHub
             </a>
-            <span className="text-white/10">·</span>
-            <a
-              href="mailto:areddyakhil@gmail.com"
-              className="hover:text-white/50 transition"
-            >
-              areddyakhil@gmail.com
-            </a>
-          </section>
+          </div>
+        </section>
 
-          {/* ── footer ────────────────────────────────────────── */}
-          <footer className="mt-16 border-t border-white/[0.04] pt-8 pb-12">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="text-[11px] font-mono text-white/15">
-                &copy; {new Date().getFullYear()} Akhil Reddy &middot; Analytics Engineering + Data Science
+        {/* ── signature visual / featured work preview ────── */}
+        <section className="mt-20">
+          <div className="flex items-end justify-between">
+            <h2 className="text-lg font-semibold text-white">Featured work</h2>
+            <Link
+              className="text-sm text-white/40 hover:text-white/70 transition"
+              href="/projects"
+            >
+              All projects &rarr;
+            </Link>
+          </div>
+
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {featured.map((p) => (
+              <Link
+                key={p.title}
+                href={p.href}
+                className="group rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.04] to-white/[0.02] p-6 transition hover:border-white/[0.12] hover:from-white/[0.06] hover:to-white/[0.03] hover:shadow-lg"
+              >
+                {/* live badge */}
+                {p.live && (
+                  <span className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-400">
+                    <span className="h-1 w-1 rounded-full bg-emerald-400 animate-pulse" />
+                    Live demo
+                  </span>
+                )}
+
+                <h3 className="text-[15px] font-semibold text-white group-hover:text-white/90">
+                  {p.title}
+                </h3>
+
+                <p className="mt-2 text-[12px] leading-relaxed text-white/45 group-hover:text-white/55">
+                  {p.outcome}
+                </p>
+
+                {/* tags */}
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {p.tags.map((t) => (
+                    <Badge
+                      key={t}
+                      variant="secondary"
+                      className="border-white/[0.06] bg-white/[0.04] text-[10px] text-white/40"
+                    >
+                      {t}
+                    </Badge>
+                  ))}
+                </div>
+
+                {/* arrow */}
+                <div className="mt-5 text-[12px] font-medium text-white/30 group-hover:text-white/60 transition">
+                  Open &rarr;
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ── role-fit matrix ───────────────────────────────── */}
+        <section className="mt-20">
+          <h2 className="text-lg font-semibold text-white">Role fit: Senior Data Visualization + AI Systems</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-white/45">
+            Portfolio evidence mapped to high-bar requirements across dashboard engineering, large-scale analytics, ML literacy, and AI agent orchestration.
+          </p>
+
+          <div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-white/[0.06]">
+            {roleFit.map((item) => (
+              <div key={item.need} className="grid gap-3 bg-white/[0.02] p-6 sm:grid-cols-[1.1fr_1.9fr]">
+                <div className="text-[12px] font-medium text-white/75">{item.need}</div>
+                <p className="text-[12px] leading-relaxed text-white/45">{item.evidence}</p>
               </div>
-              <div className="text-[11px] font-mono text-white/15">
-                37.3382&deg; N, 121.8863&deg; W
+            ))}
+          </div>
+        </section>
+
+        {/* ── what I believe in ─────────────────────────────── */}
+        <section className="mt-20">
+          <h2 className="text-lg font-semibold text-white">What I believe in</h2>
+          <p className="mt-2 text-sm text-white/40">
+            The principles behind how I build.
+          </p>
+
+          <div className="mt-8 grid gap-px sm:grid-cols-2 overflow-hidden rounded-2xl border border-white/[0.06]">
+            {principles.map((p) => (
+              <div
+                key={p.num}
+                className="relative bg-white/[0.02] p-8 transition hover:bg-white/[0.04]"
+              >
+                <span className="font-mono text-[11px] text-white/30">{p.num} &middot;</span>
+                <h3 className="mt-2 text-[15px] font-semibold text-white">{p.title}</h3>
+                <p className="mt-3 text-[13px] leading-relaxed text-white/40">{p.desc}</p>
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── footer ────────────────────────────────────────── */}
+        <footer className="mt-24 border-t border-white/[0.06] pt-8 pb-12">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="text-[12px] text-white/25">
+              &copy; {new Date().getFullYear()} Akhil Reddy
             </div>
-          </footer>
-        </div>
+            <div className="flex gap-5 text-[12px] text-white/30">
+              <Link href="/about" className="hover:text-white/50 transition">
+                About
+              </Link>
+              <Link href="/projects" className="hover:text-white/50 transition">
+                Projects
+              </Link>
+              <a
+                href="mailto:areddyakhil@gmail.com"
+                className="hover:text-white/50 transition"
+              >
+                Email
+              </a>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   );

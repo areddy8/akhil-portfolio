@@ -6,8 +6,8 @@ import { Badge } from "@/components/ui/badge";
 const projects = [
   {
     title: "Grid Analyst",
-    desc: "Pricing grid library with WAC heatmaps, portfolio performance tracking, experiment scheduling, and an AI-powered analyst. Queries real CSV data on the server.",
-    tags: ["Next.js", "OpenAI", "data viz", "pricing", "experiments"],
+    desc: "High-performance intelligence cockpit with WAC heatmaps, historical replay simulation, experiment scheduling, and AI-assisted analyst narratives over production-style telemetry.",
+    tags: ["Next.js", "OpenAI", "real-time analytics UX", "data viz", "simulation"],
     href: "/demo/grid-analyst",
     live: true,
   },
@@ -20,8 +20,8 @@ const projects = [
   },
   {
     title: "Court IQ — Tactical Spacing Analyzer",
-    desc: "Upload a screenshot from any NBA broadcast. GPT-4o vision detects players and maps them to court coordinates. Then: Voronoi tessellation for space control, driving lane analysis, spacing scores, and matchup distances — all as an interactive SVG overlay.",
-    tags: ["computer vision", "GPT-4o", "Voronoi", "spatial analysis", "Next.js"],
+    desc: "Custom visualization system combining GPT-4o vision with geometric analytics. Converts raw scene data into interactive, decision-ready overlays and explainable spatial metrics.",
+    tags: ["computer vision", "ML + UX bridge", "custom viz", "spatial analysis", "Next.js"],
     href: "/demo/court-vision",
     live: true,
   },
@@ -64,7 +64,7 @@ export default function ProjectsPage() {
       <section className="mt-12">
         <h1 className="text-3xl font-semibold tracking-tight">Projects</h1>
         <p className="mt-3 max-w-xl text-base text-muted-foreground">
-          Live demos and case studies in analytics engineering, data visualization, and AI-powered tooling.
+          Live demos in data visualization engineering, large-scale analytics, and AI-powered tooling designed to support real-time executive decision workflows.
         </p>
       </section>
 
