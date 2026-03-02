@@ -19,13 +19,6 @@ const projects = [
     live: true,
   },
   {
-    title: "NBA Shot Chart Explorer",
-    desc: "Hexbin heatmaps, hot zone overlays vs league average, player head-to-head comparison, shot momentum tracking, and career arcs for 6 NBA stars — inspired by Roboflow CV notebooks.",
-    tags: ["SVG", "sports analytics", "nba_api", "CV-inspired", "React"],
-    href: "/demo/nba-viz",
-    live: true,
-  },
-  {
     title: "Court IQ — Tactical Spacing Analyzer",
     desc: "Custom visualization system combining GPT-4o vision with geometric analytics. Converts raw scene data into interactive, decision-ready overlays and explainable spatial metrics.",
     tags: ["computer vision", "ML + UX bridge", "custom viz", "spatial analysis", "Next.js"],
@@ -36,22 +29,8 @@ const projects = [
     title: "Rasam Roots (Hobby Project)",
     desc: "A cooking-focused side project exploring recipes and food storytelling, built as a personal creative outlet outside analytics work.",
     tags: ["hobby", "cooking", "rasam", "React", "Vite"],
-    href: "https://github.com/areddy8/rasam-roots2",
-    live: false,
-  },
-  {
-    title: "Streaming Warehouse",
-    desc: "Event modeling, sessionization, and trustworthy metrics with tests + docs.",
-    tags: ["dbt-style", "semantic metrics", "tests"],
-    href: "/projects/streaming-warehouse",
-    live: false,
-  },
-  {
-    title: "Data Observability Pack",
-    desc: "Freshness, volume anomalies, schema drift checks, and RCA playbooks.",
-    tags: ["quality", "alerts", "SLAs"],
-    href: "/projects/observability-pack",
-    live: false,
+    href: "https://rasam-roots2.vercel.app/",
+    live: true,
   },
 ];
 
@@ -69,9 +48,6 @@ export default function ProjectsPage() {
           <Link className="hover:text-foreground" href="/demo/pricing-compliance">
             Compliance Radar
           </Link>
-          <Link className="hover:text-foreground" href="/demo/nba-viz">
-            NBA Viz
-          </Link>
           <Link className="hover:text-foreground" href="/about">
             About
           </Link>
@@ -81,7 +57,7 @@ export default function ProjectsPage() {
       <section className="mt-12">
         <h1 className="text-3xl font-semibold tracking-tight">Projects</h1>
         <p className="mt-3 max-w-xl text-base text-muted-foreground">
-          Live demos in data visualization engineering, large-scale analytics, and AI-powered tooling designed to support real-time executive decision workflows.
+          Live demos across data science, ML/AI applications, analytics engineering, and visualization-driven product experiences.
         </p>
       </section>
 

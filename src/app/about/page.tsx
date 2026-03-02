@@ -158,8 +158,8 @@ export default function AboutPage() {
           <Link className="hover:text-foreground" href="/demo/grid-analyst">
             Grid Analyst
           </Link>
-          <Link className="hover:text-foreground" href="/demo/nba-viz">
-            NBA Viz
+          <Link className="hover:text-foreground" href="/demo/pricing-compliance">
+            Compliance Radar
           </Link>
         </nav>
       </header>
@@ -293,7 +293,7 @@ export default function AboutPage() {
             I also built a small hobby project for recipes and food storytelling:
             {" "}
             <a
-              href="https://github.com/areddy8/rasam-roots2"
+              href="https://rasam-roots2.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline decoration-white/20 hover:text-white"

@@ -6,8 +6,8 @@ import { Badge } from "@/components/ui/badge";
 
 const statusMeta = [
   { key: "Status", value: "Building", color: "text-emerald-400/70" },
-  { key: "Domain", value: "AI Infra / Analytics / Fintech", color: "text-white/45" },
-  { key: "Stack", value: "SQL · Python · Spark · APIs · LLM tools", color: "text-white/45" },
+  { key: "Domain", value: "Data Science / ML / AI Applications", color: "text-white/45" },
+  { key: "Stack", value: "Python · SQL · Spark · LLMs · APIs · Product UX", color: "text-white/45" },
   { key: "Mode", value: "ANALYTICS_ACTIVE", color: "text-emerald-400/70" },
   { key: "Access", value: "Public", color: "text-white/45" },
 ];
@@ -69,29 +69,35 @@ const principles = [
 /* ── proof chips ───────────────────────────────────────────────── */
 
 const proofChips = [
-  "8+ years in data products and dashboard engineering",
+  "8+ years across DS, ML, and analytics engineering",
   "Owned analytics on $20B+ lending portfolio",
-  "Shipped AI-assisted decision tooling and narratives",
-  "Built APIs + workflow automation for analyst speed",
+  "Shipped AI-assisted applications and decision tooling",
+  "Built APIs, pipelines, and workflow automation",
 ];
 
 const roleFit = [
   {
-    need: "Rapid dashboard prototyping and production UX",
-    evidence: "Grid Analyst ships interactive KPI strips, heatmaps, historical replay, and what-if simulation in a production-style interface.",
+    need: "Data scientist who ships production applications",
+    evidence: "From experimentation and simulation to user-facing apps, projects combine statistical rigor with product-oriented implementation.",
   },
   {
-    need: "Bridge ML outputs and executive decision workflows",
-    evidence: "What-if simulation, AI narrative generation, and confidence-driven visual summaries turn model behavior into action-ready recommendations.",
+    need: "ML + AI workflows tied to business outcomes",
+    evidence: "What-if simulation, model-guided narratives, and automation layers convert ML signals into measurable operating decisions.",
   },
   {
-    need: "Large-scale data + low-latency discovery",
-    evidence: "Portfolio demos emphasize speed-layer thinking, filtered cohort exploration, and query-efficient summaries over high-volume datasets.",
+    need: "Scalable data and platform thinking",
+    evidence: "Work emphasizes robust data pipelines, experimentation frameworks, and low-latency analytics experiences over large datasets.",
   },
   {
-    need: "AI agent workflows and orchestration services",
-    evidence: "Experience building MCP-based tool layers and LLM-assisted diff workflows that automate multi-step analysis with human review.",
+    need: "Visualization as communication, not just charts",
+    evidence: "Visualization is used alongside modeling, experimentation, and APIs to make complex systems intuitive for operators and executives.",
   },
+];
+
+const beyondWork = [
+  "Biohacking and performance optimization",
+  "Fantasy sports analytics and game theory",
+  "Cooking projects (Rasam Roots)",
 ];
 
 /* ── page ──────────────────────────────────────────────────────── */
@@ -155,9 +161,6 @@ export default function Home() {
             <Link className="hover:text-foreground transition" href="/demo/grid-analyst">
               Demos
             </Link>
-            <Link className="hover:text-foreground transition" href="/demo/nba-viz">
-              Viz
-            </Link>
             <Link className="hover:text-foreground transition" href="/about">
               About
             </Link>
@@ -179,21 +182,21 @@ export default function Home() {
         <section className="relative mt-14">
           {/* headline — outcome-forward */}
           <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.15] tracking-tight text-white sm:text-5xl">
-            I build real-time intelligence products where data visualization, ML insights, and engineering meet.
+            I build data and AI applications: from ML modeling and experimentation to production products and decision systems.
           </h1>
 
           {/* subhead — concrete proof points */}
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/55">
-            SQL + Python + Spark patterns &middot; interactive analytics UX &middot; predictive insight visualization &middot; API-first services &middot; agentic AI workflows
+            Python + SQL + Spark &middot; ML experimentation &middot; AI application workflows &middot; API-first systems &middot; interactive analytics and visualization
           </p>
 
           {/* credibility row */}
           <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-white/40">
             <span>8+ yrs building decision systems</span>
             <span className="hidden sm:inline text-white/15">|</span>
-            <span>Data Viz &middot; Data Science &middot; Data Engineering</span>
+            <span>Data Science &middot; ML &middot; AI Applications</span>
             <span className="hidden sm:inline text-white/15">|</span>
-            <span>Python, SQL, Spark, APIs, LLM tools, cloud data stacks</span>
+            <span>Modeling, experimentation, pipelines, product UX</span>
           </div>
 
           {/* proof chips */}
@@ -309,9 +312,9 @@ export default function Home() {
 
         {/* ── role-fit matrix ───────────────────────────────── */}
         <section className="mt-20">
-          <h2 className="text-lg font-semibold text-white">Role fit: Senior Data Visualization + AI Systems</h2>
+          <h2 className="text-lg font-semibold text-white">Role fit: Data Scientist + ML/AI Product Builder</h2>
           <p className="mt-2 max-w-3xl text-sm leading-relaxed text-white/45">
-            Portfolio evidence mapped to high-bar requirements across dashboard engineering, large-scale analytics, ML literacy, and AI agent orchestration.
+            Portfolio evidence across data science, machine learning, AI-enabled workflows, and production-grade application development.
           </p>
 
           <div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-white/[0.06]">
@@ -342,6 +345,31 @@ export default function Home() {
                 <p className="mt-3 text-[13px] leading-relaxed text-white/40">{p.desc}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-20">
+          <h2 className="text-lg font-semibold text-white">Beyond work</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-white/45">
+            Outside analytics and product work, I spend time on personal experiments around health, sports strategy, and cooking.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {beyondWork.map((item) => (
+              <span
+                key={item}
+                className="inline-flex rounded-full border border-white/[0.08] bg-white/[0.04] px-3 py-1 text-[11px] text-white/55"
+              >
+                {item}
+              </span>
+            ))}
+            <a
+              href="https://rasam-roots2.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-full border border-white/[0.14] bg-white/[0.06] px-3 py-1 text-[11px] text-white/75 hover:text-white"
+            >
+              Rasam Roots Live →
+            </a>
           </div>
         </section>
 
