@@ -18,7 +18,7 @@ const experience = [
       },
       {
         heading: "A/B Testing & Ops Optimization",
-        text: "Designed and executed A/B testing frameworks to optimize lending workflows and pricing strategy; applied predictive modeling and statistical analysis to forecast customer behavior and loan performance — driving +15% approvals, maintaining WAC targets, and reducing loss rates by 10%.",
+        text: "Designed and executed A/B testing frameworks to optimize lending workflows and pricing strategy; applied predictive modeling and statistical analysis to forecast customer behavior and loan performance — quantifying approval-conversion-loss trade-offs across grid variants, maintaining WAC targets, and identifying configurations that reduced loss rates by 10%.",
       },
       {
         heading: "Data Infrastructure",
