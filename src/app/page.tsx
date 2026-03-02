@@ -387,7 +387,7 @@ export default function Home() {
                 Projects
               </Link>
               <a
-                href="mailto:areddyakhil@gmail.com"
+                href="mailto:areddyakhil8@gmail.com"
                 className="hover:text-white/50 transition"
               >
                 Email

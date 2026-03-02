@@ -14,7 +14,7 @@ const experience = [
     bullets: [
       {
         heading: "AI Tooling",
-        text: "Implemented an MCP-based tool layer enabling secure LLM access to pricing grid artifacts, experiment metadata, and evaluation tables; delivered automated \"Grid A vs Grid B\" and \"Experiment 1 vs Experiment 2\" diff + performance reports, reducing analysis cycle time by 70%+.",
+        text: "Built RAG pipelines and an MCP-based tool layer enabling secure LLM access to pricing grid artifacts, experiment metadata, and evaluation tables; delivered automated \"Grid A vs Grid B\" and \"Experiment 1 vs Experiment 2\" diff + performance reports, reducing analysis cycle time by 70%+.",
       },
       {
         heading: "A/B Testing & Ops Optimization",
