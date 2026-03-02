@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 const statusMeta = [
   { key: "Status", value: "Building", color: "text-emerald-400/70" },
   { key: "Domain", value: "Data Science / ML / AI Applications", color: "text-white/45" },
-  { key: "Stack", value: "Python · SQL · Spark · LLMs · APIs · Product UX", color: "text-white/45" },
+  { key: "Stack", value: "Python · SQL · LLMs · APIs · Product UX", color: "text-white/45" },
   { key: "Mode", value: "ANALYTICS_ACTIVE", color: "text-emerald-400/70" },
   { key: "Access", value: "Public", color: "text-white/45" },
 ];
@@ -19,8 +19,16 @@ const featured = [
     title: "Grid Analyst",
     outcome:
       "An intelligence cockpit for pricing telemetry: cohort drill-downs, historical replay, and AI-assisted what-if simulations with low-latency interactions.",
-    tags: ["Next.js", "OpenAI", "interactive telemetry", "A/B readouts"],
+    tags: ["OpenAI", "interactive telemetry", "A/B readouts"],
     href: "/demo/grid-analyst",
+    live: true,
+  },
+  {
+    title: "Pricing Compliance Radar",
+    outcome:
+      "Monte Carlo-driven compliance cockpit with real-time anomaly triage, confidence bands, product-level risk heatmaps, and pricing guardrail simulation.",
+    tags: ["risk analytics", "Monte Carlo alerting", "compliance telemetry"],
+    href: "/demo/pricing-compliance",
     live: true,
   },
   {
@@ -29,14 +37,6 @@ const featured = [
       "Vision + geometry analytics application: GPT-4o detects entities, then real-time overlays render control zones, matchup pressure, and actionable spacing insights.",
     tags: ["GPT-4o vision", "custom visualization", "spatial analysis", "SVG"],
     href: "/demo/court-vision",
-    live: true,
-  },
-  {
-    title: "Pricing Compliance Radar",
-    outcome:
-      "Monte Carlo-driven compliance cockpit with real-time anomaly triage, confidence bands, product-level risk heatmaps, and pricing guardrail simulation.",
-    tags: ["risk analytics", "Monte Carlo alerting", "compliance telemetry", "Next.js"],
-    href: "/demo/pricing-compliance",
     live: true,
   },
 ];
@@ -235,7 +235,7 @@ export default function Home() {
               Resume
             </Link>
             <a
-              href="https://linkedin.com/in/akhilreddy"
+              href="https://www.linkedin.com/in/areddyakhil/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline decoration-white/10 hover:text-white/50 transition"
@@ -243,7 +243,7 @@ export default function Home() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/akhilreddy"
+              href="https://github.com/areddy8"
               target="_blank"
               rel="noopener noreferrer"
               className="underline decoration-white/10 hover:text-white/50 transition"
