@@ -132,6 +132,12 @@ const skills = [
   { category: "Platforms", items: ["Salesforce", "Datadog", "Workato", "Toad Automation", "MATLAB", "RStudio"] },
 ];
 
+const hobbies = [
+  "Biohacking and performance optimization",
+  "Fantasy sports strategy and analytics",
+  "Cooking experiments with South Indian recipes",
+];
+
 /* ── component ─────────────────────────────────────────────────── */
 
 export default function AboutPage() {
@@ -273,6 +279,36 @@ export default function AboutPage() {
               <div className="mt-0.5 text-xs text-white/40">{e.minor}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ── beyond work ─────────────────────────────────────── */}
+      <section className="mt-16">
+        <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
+          Beyond work
+        </h2>
+        <div className="mt-6 rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.04] to-white/[0.02] p-5">
+          <p className="text-[13px] leading-relaxed text-white/60">
+            I am a biohacking enthusiast, fantasy sports nerd, and home cook.
+            I also built a small hobby project for recipes and food storytelling:
+            {" "}
+            <a
+              href="https://github.com/areddy8/rasam-roots2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-white/20 hover:text-white"
+            >
+              Rasam Roots
+            </a>
+            .
+          </p>
+          <div className="mt-4 flex flex-wrap gap-1.5">
+            {hobbies.map((hobby) => (
+              <Badge key={hobby} variant="secondary" className="text-[11px]">
+                {hobby}
+              </Badge>
+            ))}
+          </div>
         </div>
       </section>
 

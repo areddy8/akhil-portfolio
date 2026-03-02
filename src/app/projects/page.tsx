@@ -33,6 +33,13 @@ const projects = [
     live: true,
   },
   {
+    title: "Rasam Roots (Hobby Project)",
+    desc: "A cooking-focused side project exploring recipes and food storytelling, built as a personal creative outlet outside analytics work.",
+    tags: ["hobby", "cooking", "rasam", "React", "Vite"],
+    href: "https://github.com/areddy8/rasam-roots2",
+    live: false,
+  },
+  {
     title: "Streaming Warehouse",
     desc: "Event modeling, sessionization, and trustworthy metrics with tests + docs.",
     tags: ["dbt-style", "semantic metrics", "tests"],
